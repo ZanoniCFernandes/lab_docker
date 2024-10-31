@@ -1,0 +1,22 @@
+<!DOCTYPE HTML>
+<html lang="en">
+<head>
+    <meta http-equiv="Content-Type" content="text/html;charset=UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Docker Compose App</title>
+    <script>
+        fetch('/api')
+            .then(response => response.json())
+            .then(data => {
+                document.getElementById('api-response').innerText='Resposta da API' + data.message;
+            })
+            .catch(error => console.log(error.message));
+    </script>
+</head>
+<body>
+    <h1>Docker Compose App!</h1>
+    <div>
+        <p id="api-response"></p>
+    </div>
+</body>
+</html>
