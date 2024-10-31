@@ -6,7 +6,7 @@ app.use(express.json());
 const port = 3000;
 
 app.get("/api", (req, res) => {
-    res.send(`Olá para Node.js API!`);
+    res.status(200).send(`Olá para Node.js API!`);
 })
 
 app.listen(port, () => {

@@ -6,11 +6,15 @@
     <title>Docker Compose App</title>
     <script>
         fetch('/api')
-            .then(response => response.json())
+            // .then(response => response.json())
+            // .then(data => {
+            //     document.getElementById('api-response').innerText= `Resposta da API: ${data.message}`
+            // })
+            .then(response => response.text())
             .then(data => {
-                document.getElementById('api-response').innerText='Resposta da API' + data.message;
+                document.getElementById('api-response').innerText= `Resposta da API: ${data}`;
             })
-            .catch(error => console.log(error.message));
+            .catch(error => console.log(error));
     </script>
 </head>
 <body>
